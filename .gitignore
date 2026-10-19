@@ -1,0 +1,42 @@
+# --- Tracker e documenti solo locali ---
+TrackGymMeCoach.xlsx
+~$*.xlsx
+
+# --- Segreti (mai nel repository) ---
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+*.pfx
+*.pem
+
+# --- .NET ---
+bin/
+obj/
+*.user
+*.suo
+*.rsuser
+.vs/
+TestResults/
+*.trx
+coverage*.xml
+*.coverage
+
+# --- Angular / Node ---
+node_modules/
+dist/
+.angular/
+coverage/
+npm-debug.log*
+yarn-error.log*
+
+# --- Editor e sistema ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+Thumbs.db
+.DS_Store
+
+# --- Claude Code: impostazioni personali ---
+.claude/settings.local.json
