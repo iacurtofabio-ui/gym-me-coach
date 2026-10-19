@@ -5,26 +5,29 @@
 
 ---
 
-## 1. Stato — aggiornato al 14/10/2026
+## 1. Stato — aggiornato al 19/10/2026
 
-**Fase F0 in corso** (decisioni e fondamenta). **Non c'è ancora codice**: in questa cartella ci
+**Fase F0 quasi chiusa** (decisioni e fondamenta). **Non c'è ancora codice**: in questa cartella ci
 sono solo i documenti di avvio e il tracker.
 
 | | |
 |---|---|
-| Repository | `gym-me-coach` su GitHub, **pubblico** — da creare (task `F0-T08`) |
+| Repository | `gym-me-coach` su GitHub, **pubblico**, creato; ramo `dev` con il primo commit |
 | Ramo di lavoro | `dev`; `main` riceve solo le versioni stabili |
 | Backend / Frontend / Database | nessuno ancora: si creano in F2 (database di produzione: Neon, regione Europa) |
 | Test | 0 |
 | Prossima versione | **v0.1 – Motore**, fine F3 (circa 06/12/2026) |
 
-**Ultima cosa fatta** (14/10/2026): avvio della F0. Scritti `CLAUDE.md`, `BACKLOG.md`,
-`PASSAGGIO.md`, `README.md`, `.gitignore` e il tracker `TrackGymMeCoach.xlsx`, sul modello di
-Gestora, e prese le decisioni D2, D3, D5, D8 e D9 (resta D6, da decidere in F7). Prima (13/10/2026): studio di fattibilità e piano di attacco, approvato da Fabio con i
-suoi commenti.
+**Ultima cosa fatta** (19/10/2026): riletti e confermati tracker e documenti, verificati gli
+strumenti (.NET 10, Node, Git, Angular CLI, PostgreSQL), creato il repository e fatto il primo
+commit su `dev`. Il nome resta Gym Me Coach. Prima (14/10/2026): avvio della F0 e decisioni D2, D3,
+D5, D8, D9 (resta D6, da decidere in F7). Prima ancora (13/10/2026): studio di fattibilità e piano
+di attacco.
 
-**Prossimo passo**: Fabio rilegge i documenti, installa gli strumenti, crea il repository e fa il
-primo commit (task `F0-T03`…`F0-T10`). Poi F1.
+**Prossimo passo**: chiudere `F0-T10` (sessione di prova in questa cartella con
+`/riprendi-progetto`), poi spostare `PASSAGGIO.md` in `docs/archivio/`. `F0-T11` (rimuovere il
+vecchio Gym Me) quando vuoi. Poi si parte con la **F1** (`F1-T01`, scale dei livelli, e `F1-T02`,
+regole di sicurezza).
 
 ---
 
