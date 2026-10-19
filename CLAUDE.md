@@ -1,14 +1,14 @@
 # Gym Me Coach
 
 > **Documento di ingresso del progetto.** Si legge a inizio di ogni sessione.
-> Cosa è aperto → `BACKLOG.md` e foglio *Task* del tracker · Prima sessione → `PASSAGGIO.md`
+> Cosa è aperto → `BACKLOG.md` e foglio *Task* del tracker
 
 ---
 
 ## 1. Stato — aggiornato al 19/10/2026
 
-**Fase F0 quasi chiusa** (decisioni e fondamenta). **Non c'è ancora codice**: in questa cartella ci
-sono solo i documenti di avvio e il tracker.
+**Fase F1 chiusa** (il motore su carta); la F0 è quasi chiusa (resta solo `F0-T11`). **Non c'è
+ancora codice**: in questa cartella ci sono i documenti, il tracker e le regole del motore approvate.
 
 | | |
 |---|---|
@@ -18,16 +18,18 @@ sono solo i documenti di avvio e il tracker.
 | Test | 0 |
 | Prossima versione | **v0.1 – Motore**, fine F3 (circa 06/12/2026) |
 
-**Ultima cosa fatta** (19/10/2026): riletti e confermati tracker e documenti, verificati gli
-strumenti (.NET 10, Node, Git, Angular CLI, PostgreSQL), creato il repository e fatto il primo
-commit su `dev`. Il nome resta Gym Me Coach. Prima (14/10/2026): avvio della F0 e decisioni D2, D3,
-D5, D8, D9 (resta D6, da decidere in F7). Prima ancora (13/10/2026): studio di fattibilità e piano
-di attacco.
+**Ultima cosa fatta** (19/10/2026): chiusa la F1. Approvate le scale dei livelli (nuoto, bici,
+corsa), 32 regole su 34 (sicurezza, fattibilità, fasi, settimana, adattamento; restano in bozza
+solo `ALI-02` e `ALI-03`, per la F6), la libreria di 26 sedute modello, lo schema dei dati (12
+tabelle) e 12 casi di prova. Tutto raccolto in `docs/regole-del-motore.md`. Prima (stesso giorno):
+primo commit su `dev` e strumenti verificati. Prima (14/10/2026): avvio della F0 e decisioni D2,
+D3, D5, D8, D9 (resta D6, da decidere in F7). Prima ancora (13/10/2026): studio di fattibilità e
+piano di attacco.
 
-**Prossimo passo**: chiudere `F0-T10` (sessione di prova in questa cartella con
-`/riprendi-progetto`), poi spostare `PASSAGGIO.md` in `docs/archivio/`. `F0-T11` (rimuovere il
-vecchio Gym Me) quando vuoi. Poi si parte con la **F1** (`F1-T01`, scale dei livelli, e `F1-T02`,
-regole di sicurezza).
+**Prossimo passo**: la **F2 – Base tecnica**, che inizia con `F2-T01` (fissare le versioni).
+Si è in anticipo di circa tre settimane sul calendario. In parallelo Fabio può preparare `F2-T08`
+(risorse Azure) e, quando vuole, `F0-T11` (rimuovere il vecchio Gym Me). Dalla F2 si scrive
+codice: aprire una sessione nuova.
 
 ---
 
@@ -71,11 +73,11 @@ GymMeCoach/
 ├── tests/
 │   ├── GymMeCoach.Api.Tests/
 │   └── GymMeCoach.PlanEngine.Tests/
-├── docs/archivio/               documenti chiusi
+├── docs/                        regole-del-motore.md, schema-dati.md, casi-di-prova.md
+│   └── archivio/                documenti chiusi
 ├── GymMeCoach.sln
 ├── CLAUDE.md                    questo file
 ├── BACKLOG.md                   cosa resta da fare
-├── PASSAGGIO.md                 contesto per la prima sessione (poi va in docs/archivio)
 ├── README.md                    presentazione pubblica (in inglese)
 └── TrackGymMeCoach.xlsx         il tracker (solo locale, non versionato)
 ```
@@ -231,7 +233,10 @@ passo». **Date** scritte via script nel formato `2026-10-14`.
 |---|---|
 | Stato, regole di lavoro, decisioni | questo file |
 | Fasi e cosa resta da fare | `BACKLOG.md` |
-| Contesto della prima sessione | `PASSAGGIO.md` |
+| Le regole del motore, con le motivazioni | `docs/regole-del-motore.md` |
+| Le tabelle del database | `docs/schema-dati.md` |
+| I casi di prova (diventano i test del motore in F3) | `docs/casi-di-prova.md` |
+| Contesto della prima sessione (chiuso) | `docs/archivio/PASSAGGIO.md` |
 | Task, decisioni, rischi, regole del motore, mappa del codice | `TrackGymMeCoach.xlsx` (solo locale) |
 | Come si avvia, si fa una migration, si pubblica | `RUNBOOK.md` (da creare in F2) |
 | Studio di fattibilità e piano di attacco | https://claude.ai/code/artifact/90d4f3e1-298f-45ba-a976-fc44ec948ce0 |
