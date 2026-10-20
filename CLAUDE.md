@@ -5,31 +5,29 @@
 
 ---
 
-## 1. Stato — aggiornato al 19/10/2026
+## 1. Stato — aggiornato al 20/10/2026
 
-**Fase F1 chiusa** (il motore su carta); la F0 è quasi chiusa (resta solo `F0-T11`). **Non c'è
-ancora codice**: in questa cartella ci sono i documenti, il tracker e le regole del motore approvate.
+**Fasi F0 e F1 chiuse; la F2 (base tecnica) è iniziata.** **C'è il primo codice**: la soluzione
+.NET (Api, PlanEngine, test) con `/health`; per il resto ci sono i documenti e le regole del motore.
 
 | | |
 |---|---|
-| Repository | `gym-me-coach` su GitHub, **pubblico**, creato; ramo `dev` con il primo commit |
+| Repository | `gym-me-coach` su GitHub, **pubblico**; ramo `dev` |
 | Ramo di lavoro | `dev`; `main` riceve solo le versioni stabili |
-| Backend / Frontend / Database | nessuno ancora: si creano in F2 (database di produzione: Neon, regione Europa) |
-| Test | 0 |
+| Backend / Frontend / Database | backend: scheletro con `/health` (porta locale 5249); frontend e database si creano in F2 (produzione: Neon, Europa) |
+| Versioni fissate | .NET 10.0.402, Angular 22.2.3, PrimeNG 22.1.2 (`F2-T01`) |
+| Test | 2 (di avvio) |
 | Prossima versione | **v0.1 – Motore**, fine F3 (circa 06/12/2026) |
 
-**Ultima cosa fatta** (19/10/2026): chiusa la F1. Approvate le scale dei livelli (nuoto, bici,
-corsa), 32 regole su 34 (sicurezza, fattibilità, fasi, settimana, adattamento; restano in bozza
-solo `ALI-02` e `ALI-03`, per la F6), la libreria di 26 sedute modello, lo schema dei dati (12
-tabelle) e 12 casi di prova. Tutto raccolto in `docs/regole-del-motore.md`. Prima (stesso giorno):
-primo commit su `dev` e strumenti verificati. Prima (14/10/2026): avvio della F0 e decisioni D2,
-D3, D5, D8, D9 (resta D6, da decidere in F7). Prima ancora (13/10/2026): studio di fattibilità e
-piano di attacco.
+**Ultima cosa fatta** (20/10/2026): Fabio ha rimosso il vecchio Gym Me (`F0-T11`), chiudendo la F0;
+fissate le versioni (`F2-T01`); creata la soluzione .NET (`F2-T02`); tracker allineato. Prima (19/10): chiusa la F1 con 32 regole su 34
+approvate (restano in bozza solo `ALI-02` e `ALI-03`, per la F6), 26 sedute modello, schema dei dati
+(12 tabelle) e 12 casi di prova, raccolti in `docs/regole-del-motore.md`. Prima (14/10): decisioni
+D2, D3, D5, D8, D9 (resta D6, da decidere in F7).
 
-**Prossimo passo**: la **F2 – Base tecnica**, che inizia con `F2-T01` (fissare le versioni).
-Si è in anticipo di circa tre settimane sul calendario. In parallelo Fabio può preparare `F2-T08`
-(risorse Azure) e, quando vuole, `F0-T11` (rimuovere il vecchio Gym Me). Dalla F2 si scrive
-codice: aprire una sessione nuova.
+**Prossimo passo**: `F2-T03` (Angular + PrimeNG + PWA) oppure `F2-T04` (database e prima migration).
+Per F2-T03 Fabio aggiorna prima il CLI Angular globale (22.0.0 → 22.2.3). In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
+anticipo di circa tre settimane sul calendario.
 
 ---
 
@@ -75,7 +73,7 @@ GymMeCoach/
 │   └── GymMeCoach.PlanEngine.Tests/
 ├── docs/                        regole-del-motore.md, schema-dati.md, casi-di-prova.md
 │   └── archivio/                documenti chiusi
-├── GymMeCoach.sln
+├── GymMeCoach.slnx
 ├── CLAUDE.md                    questo file
 ├── BACKLOG.md                   cosa resta da fare
 ├── README.md                    presentazione pubblica (in inglese)

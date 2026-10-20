@@ -1,0 +1,5 @@
+@GymMeCoach.Api_HostAddress = http://localhost:5249
+
+GET {{GymMeCoach.Api_HostAddress}}/health
+
+###

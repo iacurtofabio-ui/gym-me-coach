@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GymMeCoach.Api/GymMeCoach.Api.csproj" />
+    <Project Path="src/GymMeCoach.PlanEngine/GymMeCoach.PlanEngine.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GymMeCoach.Api.Tests/GymMeCoach.Api.Tests.csproj" />
+    <Project Path="tests/GymMeCoach.PlanEngine.Tests/GymMeCoach.PlanEngine.Tests.csproj" />
+  </Folder>
+</Solution>
