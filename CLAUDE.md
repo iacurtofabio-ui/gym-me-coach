@@ -14,19 +14,19 @@
 |---|---|
 | Repository | `gym-me-coach` su GitHub, **pubblico**; ramo `dev` |
 | Ramo di lavoro | `dev`; `main` riceve solo le versioni stabili |
-| Backend / Frontend / Database | backend: scheletro con `/health` (porta locale 5249); frontend e database si creano in F2 (produzione: Neon, Europa) |
+| Backend / Frontend / Database | backend con `/health` (porta locale 5249); database locale `gymmecoach` (PostgreSQL 5432) con Identity; frontend in F2 (produzione: Neon, Europa) |
 | Versioni fissate | .NET 10.0.402, Angular 22.2.3, PrimeNG 22.1.2 (`F2-T01`) |
 | Test | 2 (di avvio) |
 | Prossima versione | **v0.1 – Motore**, fine F3 (circa 06/12/2026) |
 
 **Ultima cosa fatta** (20/10/2026): Fabio ha rimosso il vecchio Gym Me (`F0-T11`), chiudendo la F0;
-fissate le versioni (`F2-T01`); creata la soluzione .NET (`F2-T02`); tracker allineato. Prima (19/10): chiusa la F1 con 32 regole su 34
+fissate le versioni (`F2-T01`); creata la soluzione .NET (`F2-T02`); database `gymmecoach` con le tabelle di Identity (`F2-T04`); tracker allineato. Prima (19/10): chiusa la F1 con 32 regole su 34
 approvate (restano in bozza solo `ALI-02` e `ALI-03`, per la F6), 26 sedute modello, schema dei dati
 (12 tabelle) e 12 casi di prova, raccolti in `docs/regole-del-motore.md`. Prima (14/10): decisioni
 D2, D3, D5, D8, D9 (resta D6, da decidere in F7).
 
-**Prossimo passo**: `F2-T03` (Angular + PrimeNG + PWA) oppure `F2-T04` (database e prima migration).
-Per F2-T03 Fabio aggiorna prima il CLI Angular globale (22.0.0 → 22.2.3). In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
+**Prossimo passo**: `F2-T05` (registrazione e login, Identity + JWT) oppure `F2-T03` (Angular +
+PrimeNG + PWA; il CLI Angular è già alla 22.2.3). In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
 anticipo di circa tre settimane sul calendario.
 
 ---

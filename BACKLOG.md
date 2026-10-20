@@ -12,7 +12,7 @@
 |---|---|---|---|---|---|
 | **F0** | Decisioni e fondamenta | 19/10 – 25/10/2026 (iniziata il 13/10) | Tracker e repository pronti | – | **Chiusa il 20/10/2026** |
 | F1 | Il motore su carta | 26/10 – 08/11/2026 | Documento delle regole approvato | – | **Chiusa il 19/10/2026** |
-| F2 | Base tecnica | 09/11 – 22/11/2026 | Login funzionante online | – | **In corso** (T01, T02 fatti) |
+| F2 | Base tecnica | 09/11 – 22/11/2026 | Login funzionante online | – | **In corso** (T01, T02, T04 fatti) |
 | F3 | Motore in codice | 23/11 – 06/12/2026 | Il motore rigenera il piano di Fabio | v0.1 | Da fare |
 | F4 | Configurazione, Oggi, Piano | 07/12 – 20/12/2026 | Fabio si allena seguendo l'app | – | Da fare |
 | – | Pausa feste | 21/12/2026 – 03/01/2027 | – | – | – |
@@ -35,7 +35,7 @@ tre settimane.
 ## F2 — in corso
 
 `F2-T01` fatto (20/10/2026): Angular 22.2.3, PrimeNG 22.1.2, .NET 10.0.402. `F2-T02` fatto
-(20/10/2026): soluzione .NET con `/health`. Prossimo: `F2-T03` o `F2-T04`. `F2-T08` (risorse Azure, Fabio) può partire quando vuole.
+(20/10/2026): soluzione .NET con `/health`. `F2-T04` fatto (20/10/2026): database locale con le tabelle di Identity. Prossimo: `F2-T05` o `F2-T03`. `F2-T08` (risorse Azure, Fabio) può partire quando vuole.
 
 ## Segnalazioni dall'uso
 
