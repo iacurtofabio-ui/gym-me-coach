@@ -1,3 +1,4 @@
+using GymMeCoach.Api.Auth;
 using GymMeCoach.Api.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,8 @@ builder.Services.AddHealthChecks();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddAuth(builder.Configuration);
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -17,6 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

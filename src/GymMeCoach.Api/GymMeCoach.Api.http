@@ -3,3 +3,33 @@
 GET {{GymMeCoach.Api_HostAddress}}/health
 
 ###
+
+# Registration: test user only (invented data), adults only.
+POST {{GymMeCoach.Api_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "atleta.prova@example.test",
+  "password": "Password-di-prova-1",
+  "birthDate": "1990-05-20"
+}
+
+###
+
+# Login: copy the accessToken from the response into @token below.
+POST {{GymMeCoach.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "atleta.prova@example.test",
+  "password": "Password-di-prova-1"
+}
+
+###
+
+@token = incolla-qui-il-token
+
+GET {{GymMeCoach.Api_HostAddress}}/api/auth/me
+Authorization: Bearer {{token}}
+
+###

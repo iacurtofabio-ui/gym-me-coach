@@ -115,6 +115,22 @@ namespace GymMeCoach.Api.Data.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("6f1b7a52-3c1e-4b8e-9a43-0d2f5c7e1a01"),
+                            ConcurrencyStamp = "a1c3e5f7-0001-4000-8000-000000000001",
+                            Name = "Utente",
+                            NormalizedName = "UTENTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("6f1b7a52-3c1e-4b8e-9a43-0d2f5c7e1a02"),
+                            ConcurrencyStamp = "a1c3e5f7-0002-4000-8000-000000000002",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
