@@ -1,5 +1,14 @@
-<main class="home">
-  <h1>{{ title() }}</h1>
-  <p-button label="Fatto" icon="pi pi-check" />
-</main>
-<router-outlet />
+<div class="shell">
+  <nav class="menu" aria-label="Sezioni principali">
+    <h1 class="brand">{{ title() }}</h1>
+    @for (section of sections; track section.path) {
+      <a class="menu-item" [routerLink]="section.path" routerLinkActive="active">
+        <i class="pi" [class]="section.icon"></i>
+        <span>{{ section.label }}</span>
+      </a>
+    }
+  </nav>
+  <main class="content">
+    <router-outlet />
+  </main>
+</div>

@@ -16,7 +16,7 @@
 | Ramo di lavoro | `dev`; `main` riceve solo le versioni stabili |
 | Backend / Frontend / Database | backend con `/health` (porta locale 5249); database locale `gymmecoach` (PostgreSQL 5432) con Identity; frontend in F2 (produzione: Neon, Europa) |
 | Versioni fissate | .NET 10.0.402, Angular 22.2.3, PrimeNG 22.1.2 (`F2-T01`) |
-| Test | 10 (9 sull'Api, 1 di avvio sul motore) |
+| Test | 14 (9 sull'Api, 1 di avvio sul motore, 4 sul frontend) |
 | Prossima versione | **v0.1 – Motore**, fine F3 (circa 06/12/2026) |
 
 **Ultima cosa fatta** (20/10/2026): Fabio ha rimosso il vecchio Gym Me (`F0-T11`), chiudendo la F0;
@@ -25,7 +25,7 @@ approvate (restano in bozza solo `ALI-02` e `ALI-03`, per la F6), 26 sedute mode
 (12 tabelle) e 12 casi di prova, raccolti in `docs/regole-del-motore.md`. Prima (14/10): decisioni
 D2, D3, D5, D8, D9 (resta D6, da decidere in F7).
 
-**Prossimo passo**: il prossimo task aperto di F2 nel foglio *Task*. `F2-T03` fatto il 26/10/2026: frontend Angular + PrimeNG + PWA in `src/gym-me-coach-web` (build e 2 test ok, icone PWA ancora quelle standard di Angular). In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
+**Prossimo passo**: il prossimo task aperto di F2 nel foglio *Task*. `F2-T03` fatto il 26/10/2026: frontend Angular + PrimeNG + PWA in `src/gym-me-coach-web`, con le 5 schermate vuote e il menu (barra in basso su telefono, colonna a sinistra su PC); build e 4 test ok, icone PWA ancora quelle standard di Angular. In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
 anticipo di circa tre settimane sul calendario.
 
 ---
