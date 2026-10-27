@@ -1,13 +1,19 @@
-<div class="shell">
-  <nav class="menu" aria-label="Sezioni principali">
-    <h1 class="brand">{{ title() }}</h1>
-    @for (section of sections; track section.path) {
-      <a class="menu-item" [routerLink]="section.path" routerLinkActive="active">
-        <i class="pi" [class]="section.icon"></i>
-        <span>{{ section.label }}</span>
-      </a>
-    }
-  </nav>
+<div class="shell" [class.with-menu]="auth.isLoggedIn()">
+  @if (auth.isLoggedIn()) {
+    <nav class="menu" aria-label="Sezioni principali">
+      <h1 class="brand">{{ title() }}</h1>
+      @for (section of sections; track section.path) {
+        <a class="menu-item" [routerLink]="section.path" routerLinkActive="active">
+          <i class="pi" [class]="section.icon"></i>
+          <span>{{ section.label }}</span>
+        </a>
+      }
+      <button type="button" class="menu-item logout" (click)="auth.logout()">
+        <i class="pi pi-sign-out"></i>
+        <span>Esci</span>
+      </button>
+    </nav>
+  }
   <main class="content">
     <router-outlet />
   </main>

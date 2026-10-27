@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { AuthService } from './core/auth/auth.service';
 
 @Component({
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
@@ -8,6 +9,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
+  protected readonly auth = inject(AuthService);
   protected readonly title = signal('Gym Me Coach');
   protected readonly sections = [
     { path: '/oggi', label: 'Oggi', icon: 'pi-home' },

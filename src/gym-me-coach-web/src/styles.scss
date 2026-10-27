@@ -4,3 +4,23 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
 }
+
+.auth-page {
+  max-width: 24rem;
+  margin: 2rem auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  label {
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+.field-error {
+  color: var(--p-red-500);
+}
