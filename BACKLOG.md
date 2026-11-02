@@ -35,7 +35,15 @@ tre settimane.
 ## F2 — in corso
 
 `F2-T01` fatto (20/10/2026): Angular 22.2.3, PrimeNG 22.1.2, .NET 10.0.402. `F2-T02` fatto
-(20/10/2026): soluzione .NET con `/health`. `F2-T04` fatto (20/10/2026): database locale con le tabelle di Identity. `F2-T05` fatto (22/10/2026): registrazione, login e `/me` con Identity + JWT, ruoli Utente e Admin; provato in locale. `F2-T03` fatto (26/10/2026): frontend Angular + PrimeNG + PWA, con le 5 schermate vuote e il menu; build e test ok. `F2-T06` fatto (27/10/2026): login e registrazione nel frontend (servizio, intercettore, guardie, proxy di sviluppo); 13 test frontend ok. `F2-T08` (risorse Azure, Fabio) può partire quando vuole.
+(20/10/2026): soluzione .NET con `/health`. `F2-T04` fatto (20/10/2026): database locale con le tabelle di Identity. `F2-T05` fatto (22/10/2026): registrazione, login e `/me` con Identity + JWT, ruoli Utente e Admin; provato in locale. `F2-T03` fatto (26/10/2026): frontend Angular + PrimeNG + PWA, con le 5 schermate vuote e il menu; build e test ok. `F2-T06` fatto (27/10/2026): login e registrazione nel frontend (servizio, intercettore, guardie, proxy di sviluppo); 14 test frontend ok; provato a mano. `F2-T08` (risorse Azure, Fabio) può partire quando vuole.
+
+## Dal prototipo (02/11/2026)
+
+Analisi in `docs/lezioni-prototipo.md`. Decisioni: niente API ufficiali Garmin; il file `.fit` si
+legge sul telefono dell'utente (al server solo il riepilogo); l'esportazione verso Garmin è nel
+nucleo del prodotto (F4); il coach usa l'API di Claude a carico di Fabio, chiave solo sul server.
+Da fare prima del codice di F3: aggiornare `schema-dati.md` e `regole-del-motore.md` (sedute a
+fasi, zone per utente dai test, attività e test), poi riportare le attività nuove nel foglio *Task*.
 
 ## Segnalazioni dall'uso
 
