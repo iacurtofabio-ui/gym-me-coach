@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Stato — aggiornato al 20/10/2026
+## 1. Stato — aggiornato al 02/11/2026
 
 **Fasi F0 e F1 chiuse; la F2 (base tecnica) è iniziata.** **C'è il primo codice**: la soluzione
 .NET (Api, PlanEngine, test) con `/health`; per il resto ci sono i documenti e le regole del motore.
@@ -24,6 +24,11 @@ fissate le versioni (`F2-T01`); creata la soluzione .NET (`F2-T02`); database `g
 approvate (restano in bozza solo `ALI-02` e `ALI-03`, per la F6), 26 sedute modello, schema dei dati
 (12 tabelle) e 12 casi di prova, raccolti in `docs/regole-del-motore.md`. Prima (14/10): decisioni
 D2, D3, D5, D8, D9 (resta D6, da decidere in F7).
+
+**Dal prototipo (02/11/2026)**: Fabio usa ogni giorno l'artefatto «Oggi verso Lavaredo», che è il
+riferimento per lo sviluppo; l'analisi è in `docs/lezioni-prototipo.md` (decisioni `P1`-`P4`, §5
+punti 4, 12 e 13). Si finisce prima la F2; poi, prima del codice di F3, si riaprono
+`regole-del-motore.md` e `schema-dati.md` (sedute a fasi, zone per utente, attività e test).
 
 **Prossimo passo**: il prossimo task aperto di F2 nel foglio *Task* (`F2-T07`, CI). `F2-T06` fatto il 27/10/2026: pagine Accesso e Registrazione, servizio di accesso con token, intercettore, guardie sulle rotte, menu visibile solo dopo il login e proxy di sviluppo verso il backend; provato a mano da Fabio il 27/10/2026, con messaggi di errore chiari sotto ogni campo. `F2-T03` fatto il 26/10/2026: frontend Angular + PrimeNG + PWA in `src/gym-me-coach-web`, con le 5 schermate vuote e il menu (barra in basso su telefono, colonna a sinistra su PC); build e 4 test ok, icone PWA ancora quelle standard di Angular. In parallelo Fabio può preparare `F2-T08` (risorse Azure). Si è in
 anticipo di circa tre settimane sul calendario.
@@ -98,7 +103,8 @@ credenziali e backup **non vanno in questa cartella**, nemmeno ignorati da Git.
 
 ### Moduli del backend
 
-Utenti e accesso · Configurazione · Motore dei piani · Diario · Progressi · Alimentazione · Coach.
+Utenti e accesso · Configurazione · Motore dei piani · Diario · **Attività** (riepiloghi dei file
+`.fit`) · Progressi · Alimentazione · Coach.
 Configurazione, Diario e Coach passano tutti dal motore.
 
 ### Le schermate
@@ -157,7 +163,9 @@ scrive qui, al posto della vecchia. Le decisioni ancora aperte sono nel foglio *
 3. **Claude Code sul PC** (`D7`): cartella `Progetti_Tech/Personali/GymMeCoach`, separata da
    Gestora. Gestora si aggiunge solo quando serve, con `--add-dir`, e il suo CLAUDE.md non si carica
 4. **Nessuna app esterna collegata**: i dati li inserisce l'utente. L'unico servizio esterno è
-   l'API di Claude, per il coach
+   l'API di Claude, per il coach. Niente API Garmin (non esistono ufficiali per Claude e i connettori
+   di terzi chiedono la password). L'utente può **caricare il file `.fit`** della sua attività: si
+   legge **sul suo telefono** e al server arriva solo il riepilogo (`P1`, `P2`)
 5. **La sicurezza è una regola del motore**: questionario di idoneità, solo maggiorenni, limiti
    fissi di crescita, scarico obbligatorio. Nessuno, nemmeno il coach AI, può superarli
 6. **L'alimentazione è un esempio**: avviso fisso che non sostituisce un nutrizionista
@@ -170,6 +178,14 @@ scrive qui, al posto della vecchia. Le decisioni ancora aperte sono nel foglio *
 10. **Database di produzione: Neon** (`D8`), PostgreSQL in regione Europa (Francoforte)
 11. **Repository pubblico da subito** (`D9`): per questo la regola 6 del §7 sui segreti è ancora
     più importante
+12. **Coach AI con l'API di Claude, a carico di Fabio** (`P4`): chiave solo sul server (variabile
+    d'ambiente di Azure), limite di spesa mensile nella Console, tetto di richieste per utente,
+    risposte salvate. Gli abbonamenti Pro/Max non servono: l'API è un servizio a parte. Il coach
+    interviene dopo un'attività, nella revisione settimanale e su domanda; le sue proposte passano
+    dal motore
+13. **Esportazione verso Garmin nel nucleo del prodotto** (`P3`, F4): la seduta diventa un
+    allenamento a fasi da mettere sull'orologio. Perciò il motore produce sedute **già a fasi**,
+    non testo. Le zone di battito sono **per utente**, calcolate dai test
 
 Ancora da decidere: `D6`, il budget mensile massimo del coach AI, in F7 (task `F7-T01`).
 
@@ -233,6 +249,8 @@ passo». **Date** scritte via script nel formato `2026-10-14`.
 | Le regole del motore, con le motivazioni | `docs/regole-del-motore.md` |
 | Le tabelle del database | `docs/schema-dati.md` |
 | I casi di prova (diventano i test del motore in F3) | `docs/casi-di-prova.md` |
+| Cosa portare, rifare o rimandare dal prototipo «Oggi verso Lavaredo» | `docs/lezioni-prototipo.md` |
+| Il prototipo (riferimento per sperimentare e raccogliere feedback) | https://claude.ai/artifact/U4HKyFtdkXFDvGmoknsHny |
 | Contesto della prima sessione (chiuso) | `docs/archivio/PASSAGGIO.md` |
 | Task, decisioni, rischi, regole del motore, mappa del codice | `TrackGymMeCoach.xlsx` (solo locale) |
 | Come si avvia, si fa una migration, si pubblica | `RUNBOOK.md` (da creare in F2) |
